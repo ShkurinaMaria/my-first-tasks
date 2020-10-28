@@ -7,6 +7,6 @@ public class Main10 {
         System.out.println("Сумма чисел " + a + " и " + b + " = " + (a + b));
         System.out.println("Разность чисел " + a + " и " + b + " = " + (a - b));
         System.out.println("Произведение чисел " + a + " и " + b + " = " + (a * b));
-        System.out.println("Частное модулей чисел " + a + " и " + b + " = " + (a * a) / (b * b));
+        System.out.println("Частное квадротов чисел " + a + " и " + b + " = " + (a * a) / (b * b));
     }
 }
