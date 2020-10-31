@@ -8,5 +8,6 @@ public class Main11 {
         int x = v % 10;
         int c = a / 100;
         System.out.println("Сумма цифр числа " + a + " = " + (w + x + c));
+        System.out.println("Произведение цифр числа " + a + " = " + (w * x * c));
     }
 }
