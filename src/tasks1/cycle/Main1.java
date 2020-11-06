@@ -5,7 +5,7 @@ public class Main1 {
         int k = 134;
         int n = 10;
         for (int i = 1; i <= n; i++) {
-            System.out.println(i * k);
+            System.out.println(k);
         }
     }
 }
