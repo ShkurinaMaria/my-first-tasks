@@ -3,8 +3,11 @@ package tasks1.cassa;
 public class Main8a {
     public static void main(String[] args) {
         int day = 1;
-        int month = 3;
-        if (day > 1 && day < 31 && month > 1 && month < 12) {
+        int month = 7;
+        if (day > 31 || month > 12) {
+            System.out.println("Ошибка");
+        }
+        if (day > 1 && day < 31 && month >= 1 && month < 12) {
             System.out.println("Месяц: " + month);
             System.out.println("День: " + (day - 1));
         } else {
@@ -49,8 +52,6 @@ public class Main8a {
                         System.out.println("День: " + day);
                     }
                     break;
-                default:
-                    System.out.println("Ошибка");
             }
         }
 
