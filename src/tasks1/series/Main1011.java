@@ -5,7 +5,7 @@ import java.awt.desktop.AboutEvent;
 
 public class Main1011 {
     public static void main(String[] args) {
-        Сomparison comparison = new Сomparison (new int[]{3, 6, 8, 3, 7, 8});
+        Сomparison comparison = new Сomparison(new int[]{3, 6, 8, 3, 7, 8});
         System.out.println(comparison.comparison());
         System.out.println(comparison.comparison2());
     }
@@ -28,10 +28,11 @@ class Сomparison {
         }
         return result;
     }
+
     boolean comparison2() {
         boolean result = false;
-        for (int i = 0; i <arr.length; i++) {
-            if (arr[i] < k) {
+        for (int j : arr) {
+            if (j < k) {
                 result = true;
             }
         }
