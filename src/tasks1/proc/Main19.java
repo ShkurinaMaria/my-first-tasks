@@ -8,6 +8,6 @@ public class Main19 {
     }
 
     static double ringS(double r1, double r2) {
-        return ((Math.pow(r1, 2) * 3.14) - (Math.pow(r2, 2) * 3.14));
+        return (Math.pow(r1, 2) * 3.14) - (Math.pow(r2, 2) * 3.14);
     }
 }

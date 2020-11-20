@@ -7,7 +7,7 @@ public class Main20 {
         System.out.println(traingleP(7, 8));
     }
 
-    static float traingleP(float a, float h) {
-        return (float) (Math.pow((a / 2), 2) + Math.pow(h, 2));
+    static double traingleP(float a, float h) {
+        return Math.pow((a / 2), 2) + Math.pow(h, 2);
     }
 }

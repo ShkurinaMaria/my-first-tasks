@@ -8,6 +8,6 @@ public class Main18 {
     }
 
     static double circleS(double r) {
-        return (Math.pow(r, 2) * 3.14);
+        return Math.pow(r, 2) * 3.14;
     }
 }
