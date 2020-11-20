@@ -8,10 +8,11 @@ public class Main17 {
     }
 
     static int rootCount(int a, int b, int c) {
-        if ((Math.pow((double) b, 2) - 4 * a * c) > 0) {
+        double v = Math.pow((double) b, 2) - 4 * a * c;
+        if (v > 0) {
             return 2;
         }
-        if ((Math.pow((double) b, 2) - 4 * a * c) == 0) {
+        if (v == 0) {
             return 1;
         }
         return 0;
