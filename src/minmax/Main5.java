@@ -5,7 +5,7 @@ public class Main5 {
         Volume[] volume = new Volume[]{
                 new Volume(5, 10),
                 new Volume(4, 10),
-                new Volume(8, 20),
+                new Volume(8, 10),
         };
         System.out.println(volume(volume));
     }
@@ -13,12 +13,12 @@ public class Main5 {
     static float volume(Volume [] arr) {
         float max = arr[0].getA() / arr[0].getB();
 
-        for (int i = 0; i < arr.length; i++) {
-            float m = arr[i].getA();
-            float v = arr[i].getB();
-            float p = ((float) m / v);
+        for (Volume volume : arr) {
+            float m = volume.getA();
+            float v = volume.getB();
+            float p = (m / v);
             if (p > max) {
-                max =  p;
+                max = p;
             }
         }
         return max;
@@ -26,8 +26,8 @@ public class Main5 {
 }
 
 class Volume {
-    private float m;
-    private float v;
+    private final float m;
+    private final float v;
 
     public Volume(int m, int v) {
         this.m = m;
