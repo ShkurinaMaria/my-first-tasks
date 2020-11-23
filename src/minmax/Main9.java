@@ -17,6 +17,10 @@ public class Main9 {
                 idxMax1 = i;
             }
         }
-        System.out.println("Первое  и последнее максимальных число " + idxMax + " и " + idxMax1);
+        if (idxMax1 == idxMax) {
+            System.out.println("Индекс первого и последнего максимального числа = " + idxMax1);
+        } else {
+            System.out.println("Первое  и последнее максимальных число " + idxMax + " и " + idxMax1);
+        }
     }
 }

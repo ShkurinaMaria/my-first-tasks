@@ -2,22 +2,13 @@ package minmax;
 
 public class Main12 {
     public static void main(String[] args) {
-        int[] arr = {-9, 5, -1, -8, 6, 10, 8, 9, -4, 1};
-        int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > min) {
-                min = arr[i];
+        int[] arr = {-9, -4, -5, -5, -7, -2, 1, -11};
+        int min = Integer.MAX_VALUE;
+        for (int j : arr) {
+            if (j > 0 && j < min) {
+                min = j;
             }
         }
-        if (min > 0) {
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] < min && arr[i] > 0) {
-                    min = arr[i];
-                }
-            }
-        } else {
-            min = 0;
-        }
-        System.out.println("Минимальное положительно число = " + min);
+        System.out.println(min == Integer.MAX_VALUE ? "Мнимального положительного числа нет" : "Минимальное положительное число = " + min);
     }
 }

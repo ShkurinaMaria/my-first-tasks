@@ -1,8 +1,10 @@
 package minmax;
 
-public class Main8 {
+import java.util.Collections;
+
+public class Main8<list> {
     public static void main(String[] args) {
-        int[] arr = {4, 2, 4, 7, 4, 2};
+        int[] arr = {1, 4, 1, 4, 7, 4, 2, 5, 1};
         int min = arr[0];
         int min2 = arr[0];
         int idxMin = arr[0];
@@ -17,6 +19,10 @@ public class Main8 {
                 idxMin2 = i;
             }
         }
-        System.out.println("Индыксы первого и последнего минимальных чисел " + idxMin + " и " + idxMin2);
+        if (idxMin2 == idxMin) {
+            System.out.println("Индекс первого и последнего минимального числа = " + idxMin);
+        } else {
+            System.out.println("Индексы первого и последнего минимальных чисел " + idxMin + " и " + idxMin2);
+        }
     }
 }
