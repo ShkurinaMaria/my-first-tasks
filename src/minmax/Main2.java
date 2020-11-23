@@ -7,10 +7,10 @@ public class Main2 {
                 new Rectangle1(4, 9),
                 new Rectangle1(8, 6),
         };
-       System.out.println(maxsimum(rectangles1));
+       System.out.println(minimum(rectangles1));
     }
 
-    static int maxsimum(Rectangle1[] arr) {
+    static int minimum(Rectangle1[] arr) {
         int min = arr[0].getA() * arr[0].getB();
 
         for (int i = 0; i < arr.length; i++) {
