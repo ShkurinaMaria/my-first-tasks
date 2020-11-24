@@ -1,9 +1,5 @@
 package minmax;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
-
 public class Main15 {
     public static void main(String[] args) {
         int[] arr = {1, 9, 10, 1, 9, 0, 6};
