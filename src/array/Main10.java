@@ -18,11 +18,9 @@ public class Main10 {
 
     static void print(int[] arr) {
         for (int j = 0; j < arr.length; j += 2) {
-            arr[j] = j;
             System.out.print(arr[j] + " ");
         }
         for (int j = arr.length - 1; j > 0; j -= 2) {
-            arr[j] = j;
             System.out.print(arr[j] + " ");
         }
     }

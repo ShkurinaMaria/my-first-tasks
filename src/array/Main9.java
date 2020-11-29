@@ -16,9 +16,9 @@ public class Main9 {
 
     static void print(int[] arr) {
 
-        for (int j = arr.length - 1; j > 0; j--) {
+        for (int j = arr.length - 1; j >= 0; j--) {
             if (arr[j] % 2 == 0) {
-                System.out.print(j + " ");
+                System.out.print(arr[j] + " ");
             }
 
         }
