@@ -3,7 +3,7 @@ package array;
 public class Main11 {
     public static void main(String[] args) {
         int[] arr = generateArr(10);
-        print(arr);
+        print(arr,4);
     }
 
     static int[] generateArr(int n) {
@@ -14,8 +14,7 @@ public class Main11 {
         return arr;
     }
 
-    static void print(int[] arr) {
-        int k = 3;
+    static void print(int[] arr, int k) {
         int idx = 0;
         for (int i = 0, j = k; j < arr.length; j += k, i++) {
             idx = j;
