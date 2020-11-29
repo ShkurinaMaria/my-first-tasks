@@ -15,7 +15,7 @@ public class Main7 {
     }
 
     static void print(int[] arr) {
-        for (int j = arr.length; j > 0; j--) {
+        for (int j = arr.length - 1; j >= 0; j--) {
             System.out.print(j + " ");
         }
     }
