@@ -12,7 +12,7 @@ public class Main13 {
         }
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = i;
+            arr[i] = i * 8;
         }
         return arr;
     }
