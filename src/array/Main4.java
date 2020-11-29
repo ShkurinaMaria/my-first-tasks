@@ -2,16 +2,14 @@ package array;
 
 public class Main4 {
     public static void main(String[] args) {
-        int[] arr = generateArr(5);
+        int[] arr = generateArr(5, 2, 3);
         print(arr);
     }
 
-    static int[] generateArr(int n) {
+    static int[] generateArr(int n, int a, int d) {
         int[] arr = new int[n];
-        int a = 2;
-        int d = 2;
-        for (int i = 0, j = 0; i < n; i++, j += 1) {
-            arr[i] = (int) (a * Math.pow(d,j));
+        for (int i = 0; i < n; i++) {
+            arr[i] = (int) (a * Math.pow(d, i));
         }
         return arr;
     }

@@ -8,14 +8,14 @@ public class Main7 {
 
     static int[] generateArr(int n) {
         int[] arr = new int[n];
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = 0; i < n; i++) {
             arr[i] = i;
         }
         return arr;
     }
 
     static void print(int[] arr) {
-        for (int j : arr) {
+        for (int j = arr.length; j > 0; j--) {
             System.out.print(j + " ");
         }
     }

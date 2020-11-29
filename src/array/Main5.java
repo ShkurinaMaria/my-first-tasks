@@ -2,20 +2,16 @@ package array;
 
 public class Main5 {
     public static void main(String[] args) {
-        int[] arr = generateArr(5);
+        int[] arr = generateArr(5, 1, 1);
         print(arr);
     }
 
-    static int[] generateArr(int n) {
+    static int[] generateArr(int n, int f1, int f2) {
         int[] arr = new int[n];
-        int f1 = 1;
-        int f2 = 1;
-        int b = 0;
-        for (int i = 0; i < n; i++) {
-            b = f1;
-            f1 = f2;
-            f2 = b + f1;
-            arr[i] = f1 + b;
+        arr[0] = f1;
+        arr[1] = f2;
+        for (int i = 2; i < n; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2];
         }
         return arr;
     }
