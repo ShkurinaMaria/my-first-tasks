@@ -2,7 +2,7 @@ package array;
 
 public class Main11 {
     public static void main(String[] args) {
-        int[] arr = generateArr(10);
+        int[] arr = generateArr(9);
         print(arr, 2);
     }
 
