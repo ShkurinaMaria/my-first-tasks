@@ -2,7 +2,7 @@ package array;
 
 public class Main15 {
     public static void main(String[] args) {
-        int[] arr = generateArr(8);
+        int[] arr = generateArr(9);
         print(arr);
     }
 
@@ -15,11 +15,15 @@ public class Main15 {
     }
 
     static void print(int[] arr) {
-        for (int i = 1; i < arr.length; i += 2) {
-            System.out.print(arr[i] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 != 0) {
+                System.out.print(arr[i] + " ");
+            }
         }
-        for (int j = arr.length - 2; j >= 0; j -= 2) {
-            System.out.print(arr[j] + " ");
+        System.out.println();
+        for (int j = arr.length - 1; j >= 0; j--) {
+            if (j % 2 == 0)
+                System.out.print(arr[j] + " ");
         }
     }
 }
