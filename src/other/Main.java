@@ -1,6 +1,8 @@
 package other;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,29 +25,17 @@ public class Main {
     }
 
     public static ArrayList<Person> generatePersons() {
-        return new ArrayList<Person>() {
-            {
-                add(new Person("Patric", 200, 0));
-                add(new Person("Harper", 300, 0));
-                add(new Person("Mason", 400, 0));
-                add(new Person("Evelyn", 500, 0));
-                add(new Person("Ella", 600, 0));
-                add(new Person("Jackson", 700, 0));
-            }
-        };
+        ArrayList<String> names = new ArrayList<String>(Arrays.asList("Patric", "Harper", "Mason", "Evelyn", "Ella", "Jackson"));
+        return names.stream().map(name -> new Person(name, 0, 0)).collect(Collectors.toCollection(ArrayList::new));
     }
-    public static ArrayList<Person> updateUserProfits(ArrayList<Person> persons) {
+
+    public static void updateUserProfits(ArrayList<Person> persons) {
         int max = 200;
         int min = 100;
         persons.forEach(person -> {
-            int t = (int)(Math.random() * ((max - min) + 1)) + min;
-            if (Math.random() < 0.5) {
-                person.setProfit(person.getProfit() + t);
-            } else {
-                person.setProfit(person.getProfit() - t);
-            }
+            int t = (int) (Math.random() * ((max - min) + 1)) + min;
+            person.setProfit(person.getProfit() + t);
         });
-        return persons;
     }
 }
 
