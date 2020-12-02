@@ -5,20 +5,27 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Main {
+
     public static void main(String[] args) {
         ArrayList<Person> persons = generatePersons();
 
         System.out.println("\nПользователи: \n");
         showPersons(persons);
 
-        // System.out.println("\nРейтинг по profit: \n");
-        // тут нужен метод который посчитает рейтинг
-        // showPersons(persons);
-
         System.out.println("\nОбновленные показатели пользователей: \n");
-        updateUserProfits(persons); // накопления (profit) пользователей обновляются
+        updateUserProfits(persons);
+        calculateRating(persons);
         showPersons(persons);
+
     }
+
+    public static void calculateRating(ArrayList<Person> persons) {
+        persons.sort(new ProfitSorter());
+        for (int i = 0; i < persons.size(); i++) {
+            persons.get(i).setPosition(i+1);
+        }
+    }
+
 
     public static void showPersons(ArrayList<Person> p) {
         p.forEach(System.out::println);
@@ -38,5 +45,3 @@ public class Main {
         });
     }
 }
-
-
