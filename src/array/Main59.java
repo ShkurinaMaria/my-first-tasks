@@ -7,12 +7,12 @@ import java.util.List;
 
 public class Main59 {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(4, 5, 4, 2, 22, 1, 1, 3, 4);
+        List<Integer> list = Arrays.asList(4, 6, 4, 4);
         List<Integer> list1 = new ArrayList<>();
-        int sred = 0;
+        int aver = 0;
         for (int i = 0; i < list.size(); i++) {
-            sred += list.get(i);
-            list1.add(sred/2);
+            aver += list.get(i);
+            list1.add(aver / (i + 1));
         }
         System.out.println(list1);
     }
