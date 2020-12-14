@@ -1,4 +1,4 @@
-package array.two;
+package array.transformation;
 
 import java.util.Arrays;
 import java.util.List;
