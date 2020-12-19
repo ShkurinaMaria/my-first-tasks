@@ -27,4 +27,13 @@ public class Util {
             System.out.println();
         }
     }
+    static int[][] generateRandomMatrix(int rows, int columns) {
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix[i][j] = (int) (Math.random() * 10);
+            }
+        }
+        return matrix;
+    }
 }
