@@ -4,12 +4,12 @@ public class Main8 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomMatrix(6, 5);
         Util.printMatrix(matrix);
-        Main8.printRow(matrix, 2);
+        Main8.printColumns(matrix, 2);
     }
 
-    static void printRow(int[][] matrix, int row) {
-        for (int j = 0; j < matrix[row].length; j++) {
-            System.out.print(matrix[j][row] + " ");
+    static void printColumns(int[][] matrix, int columns) {
+        for (int j = 0; j < matrix.length; j++) {
+            System.out.println(matrix[j][columns] + " ");
         }
     }
 }

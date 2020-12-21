@@ -4,10 +4,10 @@ public class Main10 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomMatrix(5, 8);
         Util.printMatrix(matrix);
-        Main10.printRow(matrix);
+        Main10.printNotEvenColumns(matrix);
     }
 
-    static void printRow(int[][] matrix) {
+    static void printNotEvenColumns(int[][] matrix) {
         for (int[] ints : matrix) {
             for (int j = 1; j < ints.length; j += 2) {
                 System.out.print(ints[j] + " ");
