@@ -26,6 +26,7 @@ public class Util {
             }
             System.out.println();
         }
+        System.out.println();
     }
     static int[][] generateRandomMatrix(int rows, int columns) {
         int[][] matrix = new int[rows][columns];
