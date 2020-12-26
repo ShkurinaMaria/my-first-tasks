@@ -2,56 +2,39 @@ package array.matrix;
 
 public class Main15 {
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrix(5, 5);
+        int[][] matrix = Util.generateRandomMatrix(6, 6);
         Util.printMatrix(matrix);
         Main15.printSpiral(matrix);
     }
 
     static void printSpiral(int[][] matrix) {
-        int count = 0;
-        for (int v = 0; v < (matrix.length + 1) / 2; v++) {
-
-            count++;
+        int i;
+        int firstColumns = 0, firstRow = 0;
+        int lastRows = matrix.length - 1;
+        int lastColumns = matrix.length - 1;
+        while (firstRow <= lastRows &&
+                firstColumns <= lastColumns) {
+            for (i = firstColumns; i <= lastColumns; i++) {
+                System.out.print(matrix[firstRow][i] + "  ");
+            }
+            firstRow++;
+            System.out.println();
+            for (i = firstRow; i <= lastRows; i++) {
+                System.out.print(matrix[i][lastColumns] + "  ");
+            }
+            lastColumns--;
+            System.out.println();
+            for (i = lastColumns; i >= firstColumns; i--) {
+                System.out.print(matrix[lastRows][i] + "  ");
+            }
+            lastRows--;
+            System.out.println();
+            for (i = lastRows; i >= firstRow; i--) {
+                System.out.print(matrix[i][firstColumns] + "  ");
+            }
+            firstColumns++;
         }
-        for (int j = matrix.length-4-1; j < matrix.length; j++) {
-            System.out.print(matrix[matrix.length-4-1][j]+" ");
-        }
-        System.out.println();
-        for (int i = matrix.length-3-1; i <matrix.length; i++) {
-            System.out.print(matrix[i][matrix.length-1]+" ");
-        }
-        System.out.println();
-        for (int j = matrix.length-1-1; j >= 0; j--) {
-            System.out.print(matrix[matrix.length-1][j]+" ");
-        }
-        System.out.println();
-        for (int i = matrix.length-1-1; i > 0; i--) {
-            System.out.print(matrix[i][matrix.length-4-1]+" ");
-        }
-        System.out.println();
-        for (int j = matrix.length-3-1; j < matrix.length-1; j++) {
-            System.out.print(matrix[matrix.length-3-1][j]+" ");
-        }
-        System.out.println();
-        for (int i = matrix.length-2-1; i <=  matrix.length-2; i++) {
-            System.out.print(matrix[i][ matrix.length-2]+" ");
-        }
-        System.out.println();
-
-        for (int j = matrix.length-2-1; j >= matrix.length-4; j--) {
-            System.out.print(matrix[matrix.length-2][j]+" ");
-        }
-        System.out.println();
-        for (int i = matrix.length-2-1; i >= matrix.length - 3; i--) {
-            System.out.print(matrix[i][matrix.length-4]+" ");
-        }
-        System.out.println();
-        for (int i = matrix.length-2-1; i >= matrix.length - 3; i--) {
-            System.out.print(matrix[i][matrix.length-3]+" ");
-        }
-        System.out.println();
     }
 }
-
 
 
