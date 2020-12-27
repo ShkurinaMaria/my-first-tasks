@@ -10,7 +10,6 @@ public class Main14 {
     static void printАngle(int[][] matrix) {
         int count = 0;
         for (int v = 0; v < matrix.length; v++) {
-            int b = matrix.length - v - 1;
             for (int i = count; i < matrix.length; i++) {
                 for (int j = count; j <= matrix.length - 1; j++) {
                     if (i == v || j == count) {
