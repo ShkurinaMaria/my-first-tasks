@@ -9,12 +9,10 @@ public class Main24 {
 
     static void printMaxIsColumns(int[][] matrix, int columns) {
         int max = Integer.MIN_VALUE;
-        int digit;
         for (int j = 0; j < columns; j++) {
-            for (int i = 0; i < matrix.length; i++) {
-                digit = matrix[i][j];
-                if (digit > max){
-                    max = digit;
+            for (int[] ints : matrix) {
+                if (ints[j] > max) {
+                    max = ints[j];
                 }
             }
             System.out.println("Максимальное число в столбце = " + max);

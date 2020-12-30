@@ -4,10 +4,10 @@ public class Main26 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomMatrix(2, 4);
         Util.printMatrix(matrix);
-        Main26.printAction(matrix, 4);
+        Main26.printMinIsColumns(matrix, 4);
     }
 
-    static void printAction(int[][] matrix, int columns) {
+    static void printMinIsColumns(int[][] matrix, int columns) {
         int mult = 1, idxMin = 0;
         int min = Integer.MAX_VALUE;
         for (int j = 0; j < columns; j++) {
