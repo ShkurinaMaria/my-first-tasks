@@ -19,7 +19,7 @@ public class Main55 {
                 matrix[i][j] = matrix[count][j];
                 matrix[count][j] = digit;
             }
-            if (count < matrix.length-1) {
+            if (count < matrix.length - 1) {
                 count++;
             }
         }
