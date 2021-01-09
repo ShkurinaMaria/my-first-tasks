@@ -10,11 +10,54 @@ public class Util {
         }
         System.out.println();
     }
+
     static int[][] generateRandomMatrix(int rows, int columns) {
         int[][] matrix = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                matrix[i][j] = (int) (Math.random() * 10);
+                matrix[i][j] = (int) (Math.random() * 100);
+            }
+        }
+        return matrix;
+    }
+
+    static int[][] generateRandomMatrixNeg(int rows, int columns) {
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (j % 2 == 0) {
+                    matrix[i][j] = (int) (Math.random() * (-10) + 1);
+                } else {
+                    matrix[i][j] = (int) (Math.random() * 10 + 1);
+                }
+            }
+        }
+        return matrix;
+    }
+
+    static int[][] generateRandomMatrixNegColumns(int rows, int columns) {
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (i % 2 == 0) {
+                    matrix[i][j] = (int) (Math.random() * (-10) + 1);
+                } else {
+                    matrix[i][j] = (int) (Math.random() * 10 + 1);
+                }
+            }
+        }
+        return matrix;
+    }
+
+    static int[][] generateRandomMatrixEvenAndOdd(int rows, int columns) {
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (i % 2 == 0) {
+                    matrix[i][j] = i + 2;
+                } else {
+                    matrix[i][j] = (int) (Math.random() * 10);
+                }
             }
         }
         return matrix;

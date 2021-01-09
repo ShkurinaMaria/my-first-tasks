@@ -1,8 +1,15 @@
 package oop;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("ijeif j oe ", 33, 55, 3);
-        System.out.println(person);
+        Dancer dancer = new Dancer("Илюя", 11);
+        Dancer electricBoogieDancer = new ElectricBoogieDancer("Виктор", 77);
+        Dancer breakDankDancer = new BreakDankDancer("Михаил", 43);
+        dancer.dance();
+        electricBoogieDancer.dance();
+        breakDankDancer.dance();
+        }
     }
-}
