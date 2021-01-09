@@ -12,9 +12,7 @@ public class Main50 {
     }
 
     static void changeMinAndMaxInColumns(int[][] matrix, int columns) {
-        int digit = 0;
-        int idx = 0;
-        int idx1 = 0;
+        int digit = 0, idx = 0, idx1 = 0;
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
         for (int j = 0; j < columns; j++) {
             for (int i = 0; i < matrix.length; i++) {

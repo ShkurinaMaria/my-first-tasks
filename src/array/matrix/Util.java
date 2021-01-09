@@ -32,7 +32,7 @@ public class Util {
         int[][] matrix = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                matrix[i][j] = (int) (Math.random() * 10);
+                matrix[i][j] = (int) (Math.random() * 100);
             }
         }
         return matrix;
