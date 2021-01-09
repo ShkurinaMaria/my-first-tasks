@@ -8,7 +8,7 @@ public class Main33 {public static void main(String[] args) {
 
     static void findCountPosAndNeg(int[][] matrix, int columns) {
     int countPos = 0, countNeg = 0, idxRow = 0;
-        for (int i = columns -1; i >= 0; i--) {
+        for (int i = 0; i < columns; i++) {
             for (int[] ints : matrix) {
                 if (ints[i] > 0) {
                     countPos++;
@@ -23,6 +23,6 @@ public class Main33 {public static void main(String[] args) {
             countNeg = 0;
             countPos = 0;
         }
-        System.out.println("Номер строки = " + idxRow);
+        System.out.println("Номер столбца = " + idxRow);
     }
 }

@@ -4,35 +4,35 @@ import array.matrix.Util;
 
 import java.util.Arrays;
 
-public class Main49 {
+public class Main50 {
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrix(6, 4);
+        int[][] matrix = Util.generateRandomMatrix(4, 7);
         Util.printMatrix(matrix);
-        Main49.changeMinAndMaxInRow(matrix);
+        Main50.changeMinAndMaxInColumns(matrix, 4);
     }
 
-    static void changeMinAndMaxInRow(int[][] matrix) {
+    static void changeMinAndMaxInColumns(int[][] matrix, int columns) {
         int digit = 0;
         int idx = 0;
         int idx1 = 0;
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+        for (int j = 0; j < columns; j++) {
+            for (int i = 0; i < matrix.length; i++) {
                 if (matrix[i][j] < min) {
                     min = matrix[i][j];
-                    idx = j;
+                    idx = i;
 
                 }
                 if (matrix[i][j] > max) {
                     max = matrix[i][j];
-                    idx1 = j;
+                    idx1 = i;
                 }
             }
             min = Integer.MAX_VALUE;
             max = Integer.MIN_VALUE;
-            digit = matrix[i][idx1];
-            matrix[i][idx1] = matrix[i][idx];
-            matrix[i][idx] = digit;
+            digit = matrix[idx1][j];
+            matrix[idx1][j] = matrix[idx][j];
+            matrix[idx][j] = digit;
         }
         System.out.println(Arrays.deepToString(matrix));
     }
