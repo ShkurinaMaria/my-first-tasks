@@ -6,9 +6,9 @@ import java.util.Arrays;
 
 public class Main58 {
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrix(4, 6);
+        int[][] matrix = Util.generateRandomMatrix(6, 4);
         Util.printMatrix(matrix);
-        Main58.chengeHalfRow(matrix, 4, 6);
+        Main58.chengeHalfRow(matrix, 6, 4);
     }
 
     static void chengeHalfRow(int[][] matrix, int rows, int columns) {
