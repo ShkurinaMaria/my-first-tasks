@@ -37,4 +37,14 @@ public class Util {
         }
         return matrix;
     }
+    public static int[][] generateRandomMatrixNegAndPos(int rows, int columns) {
+        int min = - 5, max = 10;
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix[i][j] = (int) (Math.random() * ( max - min )) + min;
+            }
+        }
+        return matrix;
+    }
 }
