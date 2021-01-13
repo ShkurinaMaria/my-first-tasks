@@ -2,19 +2,19 @@ package array.transformation1;
 
 import array.matrix.Util;
 
-public class Main65 {
+public class Main66 {
 
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrixNegAndPos1(4, 7);
+        int[][] matrix = Util.generateRandomMatrixNegAndPos(4, 7);
         Util.printMatrix(matrix);
-        Util.printMatrix(Main65.removeColumnMax(matrix));
+        Util.printMatrix(Main66.removeColumnMax(matrix));
     }
 
     static int[][] removeColumnMax(int[][] matrix) {
         int idxColumnMax = -1;
-        for (int r = matrix[0].length - 1; r >= 0; r--) {
+        for (int r = 0; r < matrix[0].length; r++) {
             for (int v = 0; v < matrix.length; v++) {
-                if (matrix[v][r] < 0) {
+                if (matrix[v][r] > 0) {
                     break;
                 } else if (v == matrix.length - 1) {
                     idxColumnMax = r;
