@@ -6,10 +6,10 @@ public class Main59 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomMatrix(4, 2);
         Util.printMatrix(matrix);
-        Util.printMatrix(Main59.chengeHalfRow(matrix));
+        Util.printMatrix(Main59.changeHalfRow(matrix));
     }
 
-    static int[][] chengeHalfRow(int[][] matrix) {
+    static int[][] changeHalfRow(int[][] matrix) {
         int temp = 0;
         for (int i = 0; i < matrix.length / 2; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
