@@ -2,23 +2,19 @@ package array.transformation1;
 
 import array.matrix.Util;
 
+import java.util.ArrayList;
+
 public class Main61 {
 
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrix(4, 6);
-        Util.printMatrix(matrix);
-        Util.printMatrix(Main61.removeRow(matrix, 0));
+        ArrayList<ArrayList<Integer>> arr = Util.generateRandomArrayList(4, 6);
+        Util.printArrayList(arr);
+        Util.printArrayList(Main61.removeRow(arr, 3));
     }
 
-    static int[][] removeRow(int[][] matrix, int k) {
-        int[][] arr = new int[matrix.length - 1][matrix[0].length];
-        int m = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            if (i != k) {
-                arr[m] = matrix[i];
-                m++;
-            }
-        }
+
+    static ArrayList<ArrayList<Integer>> removeRow(ArrayList<ArrayList<Integer>> arr, int k) {
+        arr.remove(k);
         return arr;
     }
 }

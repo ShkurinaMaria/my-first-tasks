@@ -1,5 +1,7 @@
 package array.analytics;
 
+import java.util.ArrayList;
+
 public class Util {
     static void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {

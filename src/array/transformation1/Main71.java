@@ -20,7 +20,7 @@ public class Main71 {
                 }
             }
         }
-        System.out.print("максимальный элемент :" + min + " ");
+        System.out.print("Минимальный элемент : " + min + " ");
         System.out.println();
 
         for (int j = 0; j < arr[0].length; j++) {

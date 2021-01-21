@@ -5,7 +5,7 @@ import array.matrix.Util;
 public class Main65 {
 
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrixNegAndPos1(4, 7);
+        int[][] matrix = Util.generateRandomMatrixNegAndPos(4, 7);
         Util.printMatrix(matrix);
         Util.printMatrix(Main65.removeColumnMax(matrix));
     }

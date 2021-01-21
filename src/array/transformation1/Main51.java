@@ -2,19 +2,17 @@ package array.transformation1;
 
 import array.matrix.Util;
 
-import java.util.Arrays;
-
 public class Main51 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomMatrix(6, 4);
         Util.printMatrix(matrix);
-        Main51.changeMinAndMaxInRow(matrix, 4);
+        Util.printMatrix(Main51.changeMinAndMaxInRow(matrix, 4));
     }
 
-    static void changeMinAndMaxInRow(int[][] matrix, int columns) {
-        int digit = 0, idxRowMin = 0, idxRowMax = 0;
-        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+    static int[][] changeMinAndMaxInRow(int[][] matrix, int columns) {
+        int temp = 0, idxRowMin = 0, idxRowMax = 0;
         for (int i = 0; i < matrix.length; i++) {
+            int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] < min) {
                     min = matrix[i][j];
@@ -27,10 +25,10 @@ public class Main51 {
             }
         }
         for (int i = 0; i < columns; i++) {
-            digit = matrix[idxRowMax][i];
+            temp = matrix[idxRowMax][i];
             matrix[idxRowMax][i] = matrix[idxRowMin][i];
-            matrix[idxRowMin][i] = digit;
+            matrix[idxRowMin][i] = temp;
         }
-        System.out.println(Arrays.deepToString(matrix));
+        return matrix;
     }
 }
