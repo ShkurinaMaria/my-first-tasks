@@ -75,4 +75,13 @@ public class Util {
         }
         System.out.println();
     }
+    public static int[][] generateRandomSquareMatrix(int rows) {
+        int[][] matrix = new int[rows][rows];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows; j++) {
+                matrix[i][j] = (int) (Math.random() * 100);
+            }
+        }
+        return matrix;
+    }
 }
