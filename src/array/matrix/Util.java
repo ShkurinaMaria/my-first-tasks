@@ -75,6 +75,7 @@ public class Util {
         }
         System.out.println();
     }
+
     public static int[][] generateRandomSquareMatrix(int rows) {
         int[][] matrix = new int[rows][rows];
         for (int i = 0; i < rows; i++) {
@@ -83,5 +84,14 @@ public class Util {
             }
         }
         return matrix;
+    }
+
+    public static void swapInMatrix(int[][] matrix, int idxI1, int idxJ1, int idxI2, int idxJ2) {
+        int temp = matrix[idxI1][idxJ1];
+        matrix[idxI1][idxJ1] = matrix[idxI2][idxJ2];
+        matrix[idxI2][idxJ2] = temp;
+    }
+
+    public static void swapInMatrix(int idx1, int j, int idx, int j1) {
     }
 }

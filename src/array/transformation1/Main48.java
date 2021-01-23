@@ -10,11 +10,8 @@ public class Main48 {
     }
 
     static int[][] changeColumns(int[][] matrix, int k1, int k2) {
-        int temp = 0;
         for (int j = 0; j < matrix.length; j++) {
-            temp = matrix[j][k2];
-            matrix[j][k2] = matrix[j][k1];
-            matrix[j][k1] = temp;
+            Util.swapInMatrix(matrix, j, k2, j, k1);
         }
         return matrix;
     }

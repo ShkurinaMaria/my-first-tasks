@@ -10,12 +10,9 @@ public class Main56 {
     }
 
     static int[][] chengeHalfRow(int[][] matrix, int columns) {
-        int temp = 0;
         for (int j = 0; j < columns / 2; j++) {
             for (int i = 0; i < matrix.length; i++) {
-                temp = matrix[i][j];
-                matrix[i][j] = matrix[i][columns / 2 + j];
-                matrix[i][columns / 2 + j] = temp;
+                Util.swapInMatrix(i, j, i, columns / 2 + j);
             }
         }
         return matrix;

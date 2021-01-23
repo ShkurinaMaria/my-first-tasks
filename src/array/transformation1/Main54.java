@@ -4,13 +4,13 @@ import array.matrix.Util;
 
 public class Main54 {
     public static void main(String[] args) {
-        int[][] matrix = Util.generateRandomMatrixNegAndPos(4, 6);
+        int[][] matrix = Util.generateRandomMatrixNegAndPos(2, 2);
         Util.printMatrix(matrix);
-        Util.printMatrix(Main54.changeColumnsNeg(matrix, 6));
+        Util.printMatrix(Main54.changeColumnsNeg(matrix, 2));
     }
 
     static int[][] changeColumnsNeg(int[][] matrix, int columns) {
-        int iFirstColumn = -1, temp = 0;
+        int iFirstColumn = -1;
         for (int j = columns - 2; j >= 0; j--) {
             for (int i = 0; i < matrix.length; i++) {
                 if (matrix[i][j] >= 0) {
@@ -22,9 +22,7 @@ public class Main54 {
         }
         if (iFirstColumn >= 0) {
             for (int v = 0; v < matrix.length; v++) {
-                temp = matrix[v][iFirstColumn];
-                matrix[v][iFirstColumn] = matrix[v][columns - 1];
-                matrix[v][columns - 1] = temp;
+                Util.swapInMatrix(v, iFirstColumn, v, columns - 1);
             }
         }
         return matrix;

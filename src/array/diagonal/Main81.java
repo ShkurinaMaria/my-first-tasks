@@ -9,14 +9,12 @@ public class Main81 {
         avgDigitDiagonal(matrix);
     }
 
-    static int avgDigitDiagonal(int[][] matrix) {
-        int avg = 0, count = 0;
+    static void avgDigitDiagonal(int[][] matrix) {
+        int avg = 0, count = matrix.length;
         for (int i = 0, j = matrix.length - 1; i < matrix.length; i++, j--) {
             avg += matrix[i][j];
-            count++;
         }
         avg = avg / count;
         System.out.println("Среднее арифметическое побочной диагонали матрицы = " + avg);
-        return avg;
     }
 }

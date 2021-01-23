@@ -10,7 +10,7 @@ public class Main51 {
     }
 
     static int[][] changeMinAndMaxInRow(int[][] matrix, int columns) {
-        int temp = 0, idxRowMin = 0, idxRowMax = 0;
+        int idxRowMin = 0, idxRowMax = 0;
         for (int i = 0; i < matrix.length; i++) {
             int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
             for (int j = 0; j < matrix[i].length; j++) {
@@ -25,9 +25,7 @@ public class Main51 {
             }
         }
         for (int i = 0; i < columns; i++) {
-            temp = matrix[idxRowMax][i];
-            matrix[idxRowMax][i] = matrix[idxRowMin][i];
-            matrix[idxRowMin][i] = temp;
+            Util.swapInMatrix(matrix, idxRowMax, i, idxRowMin, i);
         }
         return matrix;
     }
