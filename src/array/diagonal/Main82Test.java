@@ -2,6 +2,8 @@ package array.diagonal;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class Main82Test {
@@ -14,7 +16,7 @@ public class Main82Test {
         };
         int [] expected = { 2, 5, 3 };
 
-        assertEquals(expected, Main82.sumDigitDiagonal(arr));
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main82.sumDigitDiagonal(arr)));
     }
 
     @Test
@@ -22,7 +24,7 @@ public class Main82Test {
         int [][] arr = { { 1 } };
         int [] expected = { 1 };
 
-        assertEquals(expected, Main82.sumDigitDiagonal(arr));
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main82.sumDigitDiagonal(arr)));
     }
 
     @Test
@@ -34,6 +36,6 @@ public class Main82Test {
         };
         int [] expected = { -1, 2, -8, 7, 3 };
 
-        assertEquals(expected, Main82.sumDigitDiagonal(arr));
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main82.sumDigitDiagonal(arr)));
     }
 }
