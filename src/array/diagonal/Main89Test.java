@@ -4,43 +4,43 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Main88Test {
+public class Main89Test {
 
     @Test
-    public void zeroBelowDiagonal() {
+    public void zeroAboveDiagonal() {
         int[][] arr = {
                 {1, 2},
                 {3, 4}
         };
         int[][] expected = {
-                {1, 2},
-                {0, 4}
+                {0, 2},
+                {3, 4}
         };
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main89.zeroAboveDiagonal(arr));
     }
 
     @Test
-    public void zeroBelowDiagonal2() {
+    public void zeroAboveDiagonal2() {
         int[][] arr = {{1}};
         int[][] expected = {{1}};
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main89.zeroAboveDiagonal(arr));
     }
 
     @Test
-    public void zeroBelowDiagonal3() {
+    public void zeroAboveDiagonal3() {
         int[][] arr = {
                 {1, 2, -1},
                 {3, -10, 5},
                 {3, 4, 1}
         };
         int[][] expected = {
-                {1, 2, -1},
+                {0, 0, -1},
                 {0, -10, 5},
-                {0, 0, 1}
+                {3, 4, 1}
         };
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main89.zeroAboveDiagonal(arr));
     }
 }

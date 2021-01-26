@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Main88Test {
+public class Main91Test {
 
     @Test
     public void zeroBelowDiagonal() {
@@ -13,19 +13,19 @@ public class Main88Test {
                 {3, 4}
         };
         int[][] expected = {
-                {1, 2},
-                {0, 4}
+                {0, 0},
+                {3, 0}
         };
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main91.zeroBelowDiagonal(arr));
     }
 
     @Test
     public void zeroBelowDiagonal2() {
         int[][] arr = {{1}};
-        int[][] expected = {{1}};
+        int[][] expected = {{0}};
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main91.zeroBelowDiagonal(arr));
     }
 
     @Test
@@ -36,11 +36,11 @@ public class Main88Test {
                 {3, 4, 1}
         };
         int[][] expected = {
-                {1, 2, -1},
-                {0, -10, 5},
-                {0, 0, 1}
+                {0, 0, 0},
+                {3, 0, 0},
+                {3, 4, 0}
         };
 
-        assertArrayEquals(expected, Main88.zeroBelowDiagonal(arr));
+        assertArrayEquals(expected, Main91.zeroBelowDiagonal(arr));
     }
 }

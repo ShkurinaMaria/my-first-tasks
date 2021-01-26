@@ -19,7 +19,7 @@ public class Main91 {
                 if (v >= matrix.length - 1) {
                     arr[i][j] = 0;
                 } else {
-                    arr[j][i] = matrix[i][j];
+                    arr[j][i] = matrix[j][i];
                 }
             }
             if (v < matrix.length - 1) {
