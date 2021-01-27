@@ -12,7 +12,7 @@ public class Main57 {
     static int[][] changeHalfRow(int[][] matrix, int rows, int columns) {
         for (int i = 0; i < rows / 2; i++) {
             for (int j = 0; j < columns / 2; j++) {
-                Util.swapInMatrix(i, j, rows / 2 + i, j + columns / 2);
+                Util.swapInMatrix(matrix, i, j, rows / 2 + i, j + columns / 2);
             }
         }
         return matrix;

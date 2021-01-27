@@ -23,7 +23,7 @@ public class Main50 {
                     idx1 = i;
                 }
             }
-            Util.swapInMatrix(idx1, j, idx, j);
+            Util.swapInMatrix(matrix, idx1, j, idx, j);
         }
         return matrix;
     }

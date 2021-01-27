@@ -22,7 +22,7 @@ public class Main53 {
         }
         if (idxColumn >= 0) {
             for (int i = 0; i < matrix.length; i++) {
-                Util.swapInMatrix(i, 0, i, idxColumn);
+                Util.swapInMatrix(matrix, i, 0, i, idxColumn);
             }
         }
         return matrix;

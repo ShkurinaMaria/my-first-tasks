@@ -22,7 +22,7 @@ public class Main54 {
         }
         if (iFirstColumn >= 0) {
             for (int v = 0; v < matrix.length; v++) {
-                Util.swapInMatrix(v, iFirstColumn, v, columns - 1);
+                Util.swapInMatrix(matrix, v, iFirstColumn, v, columns - 1);
             }
         }
         return matrix;

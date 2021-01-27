@@ -27,7 +27,7 @@ public class Main52 {
             }
         }
         for (int i = 0; i < matrix.length; i++) {
-            Util.swapInMatrix(i, idxRowMax, i, idxRowMin);
+            Util.swapInMatrix(matrix, i, idxRowMax, i, idxRowMin);
         }
         return matrix;
     }

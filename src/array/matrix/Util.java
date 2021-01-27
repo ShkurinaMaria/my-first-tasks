@@ -91,7 +91,4 @@ public class Util {
         matrix[idxI1][idxJ1] = matrix[idxI2][idxJ2];
         matrix[idxI2][idxJ2] = temp;
     }
-
-    public static void swapInMatrix(int idx1, int j, int idx, int j1) {
-    }
 }
