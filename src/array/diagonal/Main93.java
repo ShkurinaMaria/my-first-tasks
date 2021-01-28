@@ -13,7 +13,7 @@ public class Main93 {
 
     static int[][] zeroDigitDiagonal(int[][] matrix) {
         int m = matrix.length;
-        for (var i = 1; i < m / 2; i++) {
+        for (int i = 1; i < m / 2; i++) {
             for (int j = m - i; j < m; j++) {
                 matrix[i][j] = 0;
             }
