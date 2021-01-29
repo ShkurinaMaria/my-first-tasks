@@ -13,7 +13,9 @@ public class Main83 {
 
     static int[] sumDigitDiagonal(int[][] matrix) {
         int[] sums = new int[matrix.length * 2 - 1];
-        int r = 0, t = 0, p = 0;
+        int r = 0;
+        int t = 0;
+        int p = 0;
         for (int v = 0; v < matrix.length * 2 - 1; v++) {
             sums[v] = 0;
             for (int i = p, j = t; i <= r && j >= 0; i++, j--) {

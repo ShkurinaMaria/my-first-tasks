@@ -11,13 +11,13 @@ public class Main99 {
 
     static int[][] mirrorDigitDiagonal(int[][] matrix) {
         int m = matrix.length;
-        for (int x = 0; x < m / 2; x++) {
-            for (int y = x; y < m - x - 1; y++) {
-                int temp = matrix[x][y];
-                matrix[x][y] = matrix[y][m - 1 - x];
-                matrix[y][m - 1 - x] = matrix[m - 1 - x][m - 1 - y];
-                matrix[m - 1 - x][m - 1 - y] = matrix[m - 1 - y][x];
-                matrix[m - 1 - y][x] = temp;
+        for (int i = 0; i < m / 2; i++) {
+            for (int j = i; j < m - i - 1; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][m - 1 - i];
+                matrix[j][m - 1 - i] = matrix[m - 1 - i][m - 1 - j];
+                matrix[m - 1 - i][m - 1 - j] = matrix[m - 1 - j][i];
+                matrix[m - 1 - j][i] = temp;
             }
         }
         return matrix;

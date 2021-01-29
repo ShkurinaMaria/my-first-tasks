@@ -6,7 +6,7 @@ public class Main96 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomSquareMatrix(5);
         Util.printMatrix(matrix);
-        Util.printMatrix(Main96.mirrorDigitDiagonal(matrix));
+        Util.printMatrix(mirrorDigitDiagonal(matrix));
     }
 
     static int[][] mirrorDigitDiagonal(int[][] matrix) {

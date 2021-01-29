@@ -13,11 +13,13 @@ public class Main87 {
 
     static int[] maxDigitDiagonal(int[][] matrix) {
         int[] maxs = new int[matrix.length * 2 - 1];
-        int r = 0, t = 0, p = 0;
+        int r = 0;
+        int t = 0;
+        int p = 0;
         for (int v = 0; v < matrix.length * 2 - 1; v++) {
             int max = Integer.MIN_VALUE;
             for (int i = p, j = t; i <= r && j >= 0; i++, j--) {
-                max = matrix[i][j] > max ? matrix[i][j] : max;
+                max = Math.max(matrix[i][j], max);
             }
             maxs[v] = max;
             if (v < matrix.length - 1) {

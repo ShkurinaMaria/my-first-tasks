@@ -8,7 +8,7 @@ public class Main92 {
     public static void main(String[] args) {
         int[][] matrix = Util.generateRandomSquareMatrix(5);
         Util.printMatrix(matrix);
-        System.out.println(Arrays.toString(zeroDigitDiagonal(matrix)));
+        Util.printMatrix(zeroDigitDiagonal(matrix));
     }
 
     static int[][] zeroDigitDiagonal(int[][] matrix) {
@@ -18,7 +18,6 @@ public class Main92 {
                 matrix[i][j] = 0;
             }
         }
-        Util.printMatrix(matrix);
         return matrix;
     }
 }
