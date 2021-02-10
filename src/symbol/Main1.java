@@ -5,6 +5,7 @@ public class Main1 {
         System.out.println(returnCode('C'));
     }
     public static int returnCode(char character){
-        return (int) character;
+        int digit = (int) character;
+        return digit;
     }
 }
